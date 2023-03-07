@@ -11,8 +11,9 @@ import { UpcomingPaymentNotificationRecievedEvent } from './events/upcomingPayme
 @Injectable()
 export class EventListner {
   @OnEvent(SubscriptionCreatedEvent.eventName)
-  onSubscriptionCreated() {
+  onSubscriptionCreated(event: SubscriptionCreatedEvent) {
     console.log('Подписка создана');
+    console.log(event.payload);
   }
 
   @OnEvent(PaymentCreatedEvent.eventName)
