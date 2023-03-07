@@ -13,7 +13,8 @@ export class EventListner {
   @OnEvent(SubscriptionCreatedEvent.eventName)
   onSubscriptionCreated(event: SubscriptionCreatedEvent) {
     console.log('Подписка создана');
-    console.log(event.payload);
+    console.log(`Клиент: ${event.payload?.order_num}`);
+    console.log(`Подписка: ${event.payload.subscription.name}`);
   }
 
   @OnEvent(PaymentCreatedEvent.eventName)
