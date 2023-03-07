@@ -9,7 +9,7 @@ export class ProdamusNotificationService {
     } else if (notification?.products && !notification.subscription) {
       console.log('Обычный платеж');
     } else if (notification.subscription) {
-      if (notification?.subscription?.action_code == 'auth_payment') {
+      if (notification?.subscription?.action_code == 'auto_payment') {
         console.log('Успешное продление');
       } else if (notification?.subscription?.action_code == 'deactivation') {
         console.log('Диактивация подписки');
