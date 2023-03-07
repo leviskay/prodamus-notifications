@@ -7,10 +7,10 @@ export class ProdamusEventService {
   constructor(private eventEmitter: EventEmitter2) {}
 
   async emitAsync(event: ProdamusEvent<any>) {
-    return await this.eventEmitter.emitAsync(event.name, event.payload);
+    return await this.eventEmitter.emitAsync(event.name, event);
   }
 
   emit(event: ProdamusEvent<any>) {
-    return this.eventEmitter.emit(event.name, event.payload);
+    return this.eventEmitter.emit(event.name, event);
   }
 }
