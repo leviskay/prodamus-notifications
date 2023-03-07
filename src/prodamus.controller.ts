@@ -14,4 +14,12 @@ export class ProdamusHookController {
   async paymentsHandler(@Body() body: any) {
     return await this.notificationService.handleNotification(body);
   }
+
+  @FormDataRequest()
+  @HttpCode(200)
+  @Post('payments2')
+  async payments2Handler(@Body() body: any) {
+    console.log(body, '2 version');
+    return;
+  }
 }
