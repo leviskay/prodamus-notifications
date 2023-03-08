@@ -3,12 +3,15 @@ import { EventEmitterModule } from '@nestjs/event-emitter';
 import { NestjsFormDataModule } from 'nestjs-form-data';
 import { EventListner } from './event.listners';
 import { ProdamusHookController } from './prodamus.controller';
-import { ProdamusEventService } from './prodamusEventsService';
-import { ProdamusNotificationService } from './prodamusNotification.service';
+import { ProdamusNotificationModule } from '../src/module';
 
 @Module({
-  imports: [NestjsFormDataModule, EventEmitterModule.forRoot()],
+  imports: [
+    NestjsFormDataModule,
+    EventEmitterModule.forRoot(),
+    ProdamusNotificationModule,
+  ],
   controllers: [ProdamusHookController],
-  providers: [ProdamusNotificationService, EventListner, ProdamusEventService],
+  providers: [EventListner],
 })
 export class AppModule {}

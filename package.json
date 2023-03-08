@@ -1,10 +1,14 @@
 {
   "name": "prodamus-notifications",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Transorm prodamus url notification into Nest.js Events",
+  "author": "leviskay <yupehov@ya.ru>",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "keywords": [
+    "prodamus",
+    "nestjs"
+  ],
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",

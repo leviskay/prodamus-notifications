@@ -1,15 +1,17 @@
-import * as request from 'supertest';
-import { Test } from '@nestjs/testing';
-import { INestApplication } from '@nestjs/common';
-import { AppModule } from './app.module';
-import { EventEmitter2 } from '@nestjs/event-emitter';
 import { createMock, DeepMocked } from '@golevelup/ts-jest';
-import { PaymentErrorOccuredEvent } from './events/paymentErrorOccured.event';
-import { SubscriptionFinishedEvent } from './events/subscriptionFinished.event';
-import { SubscriptionRenewedEvent } from './events/subscriptionRenewed.event';
-import { SubscriptionDeactivatedEvent } from './events/subscriptionDeactivated.event';
-import { SubscriptionCreatedEvent } from './events/subcriptionCreated.event';
-import { PaymentCreatedEvent } from './events/paymentCreated.event';
+import { INestApplication } from '@nestjs/common';
+import { EventEmitter2 } from '@nestjs/event-emitter';
+import { Test } from '@nestjs/testing';
+import * as request from 'supertest';
+import {
+  PaymentCreatedEvent,
+  PaymentErrorOccuredEvent,
+  SubscriptionCreatedEvent,
+  SubscriptionDeactivatedEvent,
+  SubscriptionFinishedEvent,
+  SubscriptionRenewedEvent,
+} from '../src/events';
+import { AppModule } from './app.module';
 
 describe('/POST /prodamus/payments', () => {
   let app: INestApplication;

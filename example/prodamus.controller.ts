@@ -1,6 +1,6 @@
 import { Body, Controller, HttpCode, Post } from '@nestjs/common';
 import { FormDataRequest } from 'nestjs-form-data';
-import { ProdamusNotificationService } from './prodamusNotification.service';
+import { ProdamusNotificationService } from '../src/module/prodamusNotification.service';
 
 @Controller('prodamus')
 export class ProdamusHookController {

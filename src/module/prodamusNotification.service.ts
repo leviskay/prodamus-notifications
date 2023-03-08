@@ -1,13 +1,15 @@
 import { Injectable } from '@nestjs/common';
-import { PaymentCreatedEvent } from './events/paymentCreated.event';
-import { PaymentErrorOccuredEvent } from './events/paymentErrorOccured.event';
-import { ProdamusEvent } from './events/ProdamusEvents';
-import { SubscriptionCreatedEvent } from './events/subcriptionCreated.event';
-import { SubscriptionDeactivatedEvent } from './events/subscriptionDeactivated.event';
-import { SubscriptionFinishedEvent } from './events/subscriptionFinished.event';
-import { SubscriptionRenewedEvent } from './events/subscriptionRenewed.event';
-import { UndefinedNotificationEvent } from './events/UndefinedNotification.event';
-import { UpcomingPaymentNotificationRecievedEvent } from './events/upcomingPaymentNotificationRecieved.event';
+import {
+  PaymentCreatedEvent,
+  PaymentErrorOccuredEvent,
+  ProdamusEvent,
+  SubscriptionCreatedEvent,
+  SubscriptionDeactivatedEvent,
+  SubscriptionFinishedEvent,
+  SubscriptionRenewedEvent,
+  UndefinedNotificationEvent,
+  UpcomingPaymentNotificationRecievedEvent,
+} from 'src/events';
 import { ProdamusEventService } from './prodamusEventsService';
 
 const eventFactories: {

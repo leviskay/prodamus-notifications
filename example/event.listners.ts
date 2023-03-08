@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { OnEvent } from '@nestjs/event-emitter';
-import { PaymentCreatedEvent } from './events/paymentCreated.event';
-import { PaymentErrorOccuredEvent } from './events/paymentErrorOccured.event';
-import { SubscriptionCreatedEvent } from './events/subcriptionCreated.event';
-import { SubscriptionDeactivatedEvent } from './events/subscriptionDeactivated.event';
-import { SubscriptionFinishedEvent } from './events/subscriptionFinished.event';
-import { SubscriptionRenewedEvent } from './events/subscriptionRenewed.event';
-import { UpcomingPaymentNotificationRecievedEvent } from './events/upcomingPaymentNotificationRecieved.event';
+import { PaymentCreatedEvent } from '../src/events/paymentCreated.event';
+import { PaymentErrorOccuredEvent } from '../src/events/paymentErrorOccured.event';
+import { SubscriptionCreatedEvent } from '../src/events/subcriptionCreated.event';
+import { SubscriptionDeactivatedEvent } from '../src/events/subscriptionDeactivated.event';
+import { SubscriptionFinishedEvent } from '../src/events/subscriptionFinished.event';
+import { SubscriptionRenewedEvent } from '../src/events/subscriptionRenewed.event';
+import { UpcomingPaymentNotificationRecievedEvent } from '../src/events/upcomingPaymentNotificationRecieved.event';
 
 @Injectable()
 export class EventListner {
@@ -34,12 +34,12 @@ export class EventListner {
 
   @OnEvent(SubscriptionFinishedEvent.eventName)
   onSubscriptionFinished() {
-    console.log('Finish');
+    console.log('Подписка завершена');
   }
 
   @OnEvent(PaymentErrorOccuredEvent.eventName)
   onPaymentErrorOccured() {
-    console.log('Error');
+    console.log('Ошибка платежа');
   }
 
   @OnEvent(UpcomingPaymentNotificationRecievedEvent.eventName)

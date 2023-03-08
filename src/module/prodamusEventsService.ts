@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { EventEmitter2 } from '@nestjs/event-emitter';
-import { ProdamusEvent } from './events/ProdamusEvents';
+import { ProdamusEvent } from '../events/ProdamusEvents';
 
 @Injectable()
 export class ProdamusEventService {
